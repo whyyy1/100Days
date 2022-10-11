@@ -1,12 +1,24 @@
 import datetime, random
 
-def randomBd(num):
-    pass
+def compareBd(list):
+    count = 0
+    #loops through list comparing all the values to each other 
+    for a, birthdayA in enumerate(list):
+        for b, birthdayB in enumerate(list[a + 1:]):
+            # print(a,birthdayA,b,birthdayB)
+            if birthdayA == birthdayB:
+                count +=1
+                print(birthdayA)
+    
+    # else:
+    #     print(f'had no matches, now running 10000 sims to see what we get ')
+        
+    #     for i in range(10000):
+    #         if i % 10000 == 0:
+    #             print(i,"simulations ran")
+            
 
-
-
-
-def birthdayPara():
+def birthdayPara(total=0):
     total = int(input('How many birthdays to generate: (MAX 100)'))
     bd = []
     
@@ -22,8 +34,10 @@ def birthdayPara():
 
         randomDate = datetime.date(randY,randM, randD)
         bd.append([randomDate.day,randomDate.month])
-        
-    print(bd)
+    compareBd(bd)
+    
+
+    
 
 
 birthdayPara()
