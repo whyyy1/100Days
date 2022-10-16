@@ -59,8 +59,4 @@ class startNode:
         newNode.nextVal = self.headVal
         self.headVal = newNode
 
-        
 
-        
-    
-         
