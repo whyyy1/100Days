@@ -13,3 +13,5 @@ Function we use:
 
 
 Tensor obeject = array 
+
+Hidden Layer - the layers of the neural network that are neither input or output
